@@ -4,20 +4,49 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FeaturedViewCell" id="gTV-IL-0wX" customClass="FeaturedViewCell" customModule="EventAppCompositionalLayout" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="180" height="269"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <rect key="frame" x="0.0" y="0.0" width="180" height="269"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pVC-G9-LU6">
+                        <rect key="frame" x="0.0" y="0.0" width="180" height="269"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xx6-Jb-gYY">
+                                <rect key="frame" x="-1" y="0.0" width="180" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <point key="canvasLocation" x="128" y="-11"/>
+            <constraints>
+                <constraint firstItem="pVC-G9-LU6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Z8x-Wl-H77"/>
+                <constraint firstAttribute="bottom" secondItem="pVC-G9-LU6" secondAttribute="bottom" id="itt-Zf-a8z"/>
+                <constraint firstItem="pVC-G9-LU6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="pr5-rH-uTr"/>
+                <constraint firstAttribute="trailing" secondItem="pVC-G9-LU6" secondAttribute="trailing" id="xde-ym-j0E"/>
+            </constraints>
+            <size key="customSize" width="180" height="148"/>
+            <point key="canvasLocation" x="106.15384615384615" y="-7.4644549763033172"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
