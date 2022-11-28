@@ -21,6 +21,11 @@ struct Section: Hashable {
         case recommended
         case latest
         case categories
+        case article
+        case recommendations
+        case meeting
+        case about
+        case similar
     }
     
     struct SectionType: RawRepresentable, Hashable {
@@ -35,5 +40,10 @@ struct Section: Hashable {
         static let recommended = SectionType(rawValue: Section.ItemSectionType.recommended.rawValue)
         static let latest = SectionType(rawValue: Section.ItemSectionType.latest.rawValue)
         static let categories = SectionType(rawValue: Section.ItemSectionType.categories.rawValue)
+        static let article = SectionType(rawValue: Section.ItemSectionType.article.rawValue)
+        static let recommendations = SectionType(rawValue: Section.ItemSectionType.recommendations.rawValue)
+        static let meeting = SectionType(rawValue: Section.ItemSectionType.meeting.rawValue)
+        static let about = SectionType(rawValue: Section.ItemSectionType.about.rawValue)
+        static let similar = SectionType(rawValue: Section.ItemSectionType.similar.rawValue)
     }
 }
