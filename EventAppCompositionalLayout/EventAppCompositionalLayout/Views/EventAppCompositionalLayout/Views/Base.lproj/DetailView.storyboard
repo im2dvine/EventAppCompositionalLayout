@@ -40,19 +40,37 @@
                                     <constraint firstAttribute="height" constant="96" id="hey-Fd-OM1"/>
                                 </constraints>
                             </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6i8-gV-TBp">
+                                <rect key="frame" x="0.0" y="96" width="390" height="714"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MIF-o3-MmA">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nho-iU-bvM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="50r-lX-Jyk" firstAttribute="leading" secondItem="nho-iU-bvM" secondAttribute="leading" id="L39-uO-Om4"/>
+                            <constraint firstItem="6i8-gV-TBp" firstAttribute="top" secondItem="50r-lX-Jyk" secondAttribute="bottom" id="MZ1-8i-dX6"/>
                             <constraint firstItem="50r-lX-Jyk" firstAttribute="top" secondItem="3s5-tm-A09" secondAttribute="top" id="ckO-Ni-BJT"/>
+                            <constraint firstItem="6i8-gV-TBp" firstAttribute="leading" secondItem="nho-iU-bvM" secondAttribute="leading" id="dJN-y2-uLN"/>
                             <constraint firstItem="50r-lX-Jyk" firstAttribute="trailing" secondItem="nho-iU-bvM" secondAttribute="trailing" id="dOi-SL-2iD"/>
+                            <constraint firstItem="nho-iU-bvM" firstAttribute="trailing" secondItem="6i8-gV-TBp" secondAttribute="trailing" id="eii-T7-F6T"/>
+                            <constraint firstItem="nho-iU-bvM" firstAttribute="bottom" secondItem="6i8-gV-TBp" secondAttribute="bottom" id="zL7-aP-MRz"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Detail" id="b9C-wL-KAs">
                         <imageReference key="image" image="star.fill" catalog="system" symbolScale="default"/>
                         <color key="badgeColor" systemColor="systemIndigoColor"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="collectionView" destination="6i8-gV-TBp" id="qSQ-vp-qD4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6mr-Vq-p8C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

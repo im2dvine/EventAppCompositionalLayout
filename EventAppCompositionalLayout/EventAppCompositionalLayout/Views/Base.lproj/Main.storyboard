@@ -12,7 +12,7 @@
         <!--Home-->
         <scene sceneID="l8m-Ue-Bjv">
             <objects>
-                <viewController id="mWY-e1-IAR" sceneMemberID="viewController">
+                <viewController id="mWY-e1-IAR" customClass="HomeViewController" customModule="EventAppCompositionalLayout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vO6-vk-lVj">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,12 +43,27 @@
                                     <constraint firstAttribute="height" constant="96" id="O5R-MJ-9T9"/>
                                 </constraints>
                             </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MIa-oS-IeX">
+                                <rect key="frame" x="0.0" y="96" width="390" height="665"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Wl6-f4-CCF">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EA5-bI-bH2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="MIa-oS-IeX" firstAttribute="top" secondItem="J6a-Dt-h8I" secondAttribute="bottom" id="G1g-AJ-YMH"/>
+                            <constraint firstItem="EA5-bI-bH2" firstAttribute="bottom" secondItem="MIa-oS-IeX" secondAttribute="bottom" id="QVM-Qm-thh"/>
+                            <constraint firstItem="MIa-oS-IeX" firstAttribute="leading" secondItem="EA5-bI-bH2" secondAttribute="leading" id="VBN-n1-AYu"/>
                             <constraint firstItem="EA5-bI-bH2" firstAttribute="trailing" secondItem="J6a-Dt-h8I" secondAttribute="trailing" id="X5f-Kz-JR8"/>
                             <constraint firstItem="J6a-Dt-h8I" firstAttribute="leading" secondItem="EA5-bI-bH2" secondAttribute="leading" id="bnz-fX-bsB"/>
+                            <constraint firstItem="EA5-bI-bH2" firstAttribute="trailing" secondItem="MIa-oS-IeX" secondAttribute="trailing" id="pkD-u1-3L2"/>
                             <constraint firstItem="J6a-Dt-h8I" firstAttribute="top" secondItem="vO6-vk-lVj" secondAttribute="top" id="tu7-W1-1n9"/>
                         </constraints>
                     </view>
@@ -56,6 +71,9 @@
                         <imageReference key="image" image="house.fill" catalog="system" symbolScale="default"/>
                         <color key="badgeColor" systemColor="systemIndigoColor"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="collectionView" destination="MIa-oS-IeX" id="JT4-Oh-CRg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9jf-AK-6dD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
