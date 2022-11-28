@@ -19,7 +19,6 @@ struct Section: Hashable {
     enum ItemSectionType: String {
         case featured
         case recommended
-        case header
         case latest
         case categories
     }
@@ -34,7 +33,6 @@ struct Section: Hashable {
         
         static let featured = SectionType(rawValue: Section.ItemSectionType.featured.rawValue)
         static let recommended = SectionType(rawValue: Section.ItemSectionType.recommended.rawValue)
-        static let header = SectionType(rawValue: Section.ItemSectionType.header.rawValue)
         static let latest = SectionType(rawValue: Section.ItemSectionType.latest.rawValue)
         static let categories = SectionType(rawValue: Section.ItemSectionType.categories.rawValue)
     }

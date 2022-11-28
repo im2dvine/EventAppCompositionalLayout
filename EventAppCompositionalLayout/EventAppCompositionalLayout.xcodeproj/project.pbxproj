@@ -86,10 +86,10 @@
 		12CAAD6F29350F3E00621D87 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				12CAAD7A293514A600621D87 /* Categories */,
-				12CAAD792935149D00621D87 /* Latest */,
-				12CAAD782935149100621D87 /* Recommended */,
 				12CAAD772935147800621D87 /* Featured */,
+				12CAAD782935149100621D87 /* Recommended */,
+				12CAAD792935149D00621D87 /* Latest */,
+				12CAAD7A293514A600621D87 /* Categories */,
 				12CAAD652935073B00621D87 /* LaunchScreen.storyboard */,
 				12CAAD602935073900621D87 /* Main.storyboard */,
 				12CAAD7B2935175B00621D87 /* DetailView.storyboard */,

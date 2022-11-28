@@ -16,8 +16,41 @@
                     <view key="view" contentMode="scaleToFill" id="vO6-vk-lVj">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J6a-Dt-h8I" userLabel="NavigationView">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="96"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lines50x50" translatesAutoresizingMaskIntoConstraints="NO" id="DyF-mr-Q9T">
+                                        <rect key="frame" x="40" y="56" width="18" height="14"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="guide-img" translatesAutoresizingMaskIntoConstraints="NO" id="gzQ-44-9bj">
+                                        <rect key="frame" x="327" y="48" width="32" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="aHv-9w-Qxr">
+                                        <rect key="frame" x="150" y="53" width="91" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="O5R-MJ-9T9"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="EA5-bI-bH2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EA5-bI-bH2" firstAttribute="trailing" secondItem="J6a-Dt-h8I" secondAttribute="trailing" id="X5f-Kz-JR8"/>
+                            <constraint firstItem="J6a-Dt-h8I" firstAttribute="leading" secondItem="EA5-bI-bH2" secondAttribute="leading" id="bnz-fX-bsB"/>
+                            <constraint firstItem="J6a-Dt-h8I" firstAttribute="top" secondItem="vO6-vk-lVj" secondAttribute="top" id="tu7-W1-1n9"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="OGd-Zz-ve8">
                         <imageReference key="image" image="house.fill" catalog="system" symbolScale="default"/>
@@ -26,7 +59,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9jf-AK-6dD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="119" y="-612"/>
+            <point key="canvasLocation" x="118.46153846153845" y="-612.08530805687201"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="tDB-bv-pSi">
@@ -59,7 +92,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="guide-img" width="327" height="200"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="lines50x50" width="50" height="50"/>
+        <image name="logo" width="51" height="22"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
