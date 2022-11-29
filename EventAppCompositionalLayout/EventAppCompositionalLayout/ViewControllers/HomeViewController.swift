@@ -32,6 +32,21 @@ class HomeViewController: UIViewController {
                 section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 24, bottom: 5, trailing: 0)
                 
                 return section
+            case .recommended:
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(250))
+                
+                let item = NSCollectionLayoutItem(layoutSize: itemSize)
+                
+                let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(351), heightDimension: .absolute(250))
+                
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+                group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 24)
+                
+                let section = NSCollectionLayoutSection(group: group)
+                section.orthogonalScrollingBehavior = .groupPaging
+                section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 24, bottom: 5, trailing: 0)
+                
+                return section
                 
                 
             default: return nil
@@ -74,7 +89,9 @@ class HomeViewController: UIViewController {
             case .featured:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeaturedViewCell", for: indexPath)
                 return cell
-          
+            case .recommended:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommendedViewCell", for: indexPath)
+                return cell
                 
             default: return nil
                 
@@ -84,6 +101,9 @@ class HomeViewController: UIViewController {
         
         let sections = [
             Section(type: .featured, items: [
+                Item(), Item(), Item()
+            ]),
+            Section(type: .recommended, items: [
                 Item(), Item(), Item()
             ])
         ]
