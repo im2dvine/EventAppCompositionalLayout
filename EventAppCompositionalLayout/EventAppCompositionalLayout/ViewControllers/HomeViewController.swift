@@ -18,11 +18,11 @@ class HomeViewController: UIViewController {
             
             switch sectionType {
             case .featured:
-                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(269))
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(230))
                 
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
                 
-                let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(204), heightDimension: .absolute(269))
+                let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(204), heightDimension: .absolute(230))
                 
                 let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
                 group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 24)
